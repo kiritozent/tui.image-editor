@@ -748,7 +748,7 @@ class Ui {
 
     if (this.submenu === menuName && toggle) {
       this.submenu = null;
-    } else {
+    } else if (this._buttonElements[menuName]) {
       this._buttonElements[menuName].classList.add('active');
       this._mainElement.classList.add(`tui-image-editor-menu-${menuName}`);
       this.submenu = menuName;
